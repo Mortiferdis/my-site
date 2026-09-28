@@ -1,52 +1,277 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Мой первый сайт</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Матвей — моя визитка</title>
   <style>
-  body {
-    background-color: lightyellow; /* светло-голубой фон */
-    font-family: Arial, sans-serif; /* шрифт */
-    text-align: center; /* всё по центру */
-    padding: 20px;
-  }
-  h1 {
-    color: darkblue; /* тёмно-синий цвет заголовка */
-  }
-  p {
-    color: #333333; /* цвет текста */
-    font-size: 18px; /* размер текста */
-  }
-  button {
-    color: white; /* белый текст */
-    border: none; /* убрать рамку */
-    padding: 12px 24px; /* отступы внутри кнопки */
-    font-size: 16px;
-    border-radius: 8px; /* закруглённые углы */
-    margin: 5px;
-  }
-    .green-btn {
-  background-color: green; /* зелёный фон */
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px 15px;
+      margin: 0;
+    }
+    .card {
+      background-color: white;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #2c3e50;
+      margin: 20px 0 5px;
+      font-size: 26px;
+    }
+    .subtitle {
+      color: #7f8c8d;
+      font-size: 16px;
+      margin: 0 0 20px;
+    }
+    p {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
+  border: 3px solid #e0e0e0;
+    }
+    .links {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.red-btn {
-  background-color: red; /* красный фон */
+.btn {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.2s;
+
+    transition: background-color 0.2s, transform 0.1s;
 }
-    .green-btn:hover {
-  background-color: darkgreen;
+.btn-tg {
+  background-color: #229ED9;
+}
+.btn-tg:hover {
+  background-color: #1a7aad;
+  transform: scale(1.03);
+}
+.btn-mail {
+  background-color: #e74c3c;
+}
+.btn-mail:hover {
+  background-color: #c0392b;
 }
 
-.red-btn:hover {
-  background-color: darkred;
+.btn-phone {
+  background-color: #27ae60;
 }
-    </style>
+.btn-phone:hover {
+  background-color: #1e8449;
+}
+.btn:hover {
+  background-color: #2980b9;
+}
+    @keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeUp 0.8s ease-out;
+}
+    .skills {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.skills h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.skill {
+  margin-bottom: 12px;
+}
+
+.skill span {
+  display: block;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.bar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 10px;
+  background-color: #3498db;
+}
+
+.html-fill { width: 20%; background-color: #e44d26; }
+.css-fill  { width: 10%; background-color: #264de4; }
+.js-fill   { width: 5%; background-color: #f0db4f; }
+ .projects {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.projects h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.project {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.project a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+.project p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #666;
+  }
+.menu {
+  background-color: #2c3e50;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  padding: 8px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+.menu a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin: 0 5px;
+  font-size: 15px;
+  transition: background-color 0.2s;
+}
+
+.menu a:hover {
+  background-color: #34495e;
+}
+
+.menu a.active {
+  background-color: #3498db;
+  font-weight: bold;
+}
+  </style>
 </head>
 <body>
-  <h1>Привет! Я Матвей, учусь программировать</h1>
-  <p>Это мой первый абзац на сайте.</p>
-  <p>Хочу научиться програмировать чтобы зарабатывать, и создавать что то свое.</p>
-  <button class="green-btn" onclick="alert('Ты нажал кнопку!')">Нажми меня</button>
-<button class="red-btn" onclick="alert('Нет, лучше меня!')">Нет лучше меня!</button>
-  
+  <nav class="menu">
+  <a href="first.html">Первый сайт</a>
+  <a href="index.html" class="active">Визитка</a>
+  </nav>
+  <div class="card">
+    <img src="avatar.jpg" alt="Моё фото" class="avatar">
+    <h1><span id="greeting">Привет</span>, я Матвей!</h1>
+    <p class="subtitle">Начинающий веб-разработчик</p>
+    <p>Учусь программировать, чтобы создавать свои проекты и зарабатывать.</p>
+    <div class="links">
+  <a href="https://t.me/твой_ник" class="btn btn-tg">✈️ Telegram</a>
+  <a href="mailto:твоя_почта@mail.ru" class="btn btn-mail">✉️ Почта</a>
+  <a href="tel:+79991234567" class="btn btn-phone">📞 Позвонить</a>
+      <div class="skills">
+  <h2>Мои навыки</h2>
+
+  <div class="skill">
+    <span>HTML</span>
+    <div class="bar"><div class="fill html-fill"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>CSS</span>
+    <div class="bar"><div class="fill css-fill"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>JavaScript</span>
+    <div class="bar"><div class="fill js-fill"></div></div>
+  </div>
+        <div class="projects">
+  <h2>Мои проекты</h2>
+
+  <div class="project">
+    <a href="first.html">Мой первый сайт</a>
+    <p>Первая страница с кнопками и стилями.</p>
+  </div>
+
+  <div class="project">
+    <a href="index.html">Визитка</a>
+    <p>Страница-визитка с аватаркой и контактами.</p>
+  </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  <script>
+  let hour = new Date().getHours();
+  let greetingText = "Привет";
+let bgColor = "#f4f4f4";
+  if (hour >= 5 && hour < 12) {
+  greetingText = "Доброе утро";
+  bgColor = "#fff8e1"; /* светло-жёлтый, как рассвет */
+} else if (hour >= 12 && hour < 18) {
+  greetingText = "Добрый день";
+  bgColor = "#e3f2fd"; /* светло-голубой, как небо днём */
+} else if (hour >= 18 && hour < 23) {
+  greetingText = "Добрый вечер";
+  bgColor = "#ffe0b2"; /* тёплый оранжевый, как закат */
+} else {
+  greetingText = "Доброй ночи";
+  bgColor = "#cfd8dc"; /* серо-синий, как ночь */
+    }
+
+  document.getElementById("greeting").textContent = greetingText;
+    document.body.style.backgroundColor = bgColor;
+  </script>
 </body>
 </html>
